@@ -1,0 +1,15 @@
+version: 2
+
+models:
+  - name: mart_energy_features
+    description: "ML-ready features: Germany hourly load with renewables share, lags, and rolling averages"
+    columns:
+      - name: ts_utc
+        description: "Timestamp of the observation (UTC)"
+        tests:
+          - not_null
+
+      - name: target_load
+        description: "Germany electricity demand (MW)"
+        tests:
+          - not_null

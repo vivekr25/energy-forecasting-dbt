@@ -1,0 +1,20 @@
+# Python / venv
+.venv/
+__pycache__/
+*.pyc
+
+# dbt build artifacts
+target/
+dbt_packages/
+logs/
+
+# local DBs / binaries
+*.duckdb
+*.db
+energy_dbt/energy.duckdb
+
+# OS cruft
+.DS_Store
+
+# Big seed we’ll fetch separately (don’t commit)
+energy_dbt/seeds/time_series_60min_singleindex.csv

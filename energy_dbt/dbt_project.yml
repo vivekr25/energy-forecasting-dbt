@@ -1,0 +1,29 @@
+name: 'energy_dbt'
+version: '1.0.0'
+profile: 'energy_dbt'
+
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+models:
+  energy_dbt:
+    example:
+      +materialized: view
+
+    # All models under models/staging/ → schema main_main, materialized as tables
+    staging:
+      +schema: main_main
+      +materialized: table
+
+    # All models under models/marts/ → schema mart, materialized as tables
+    marts:
+      +schema: mart
+      +materialized: table
