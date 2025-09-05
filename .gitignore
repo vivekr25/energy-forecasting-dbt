@@ -8,13 +8,13 @@ target/
 dbt_packages/
 logs/
 
-# local DBs / binaries
+# Local DuckDB files
 *.duckdb
 *.db
 energy_dbt/energy.duckdb
 
+# Large seed file (keep locally only)
+energy_dbt/seeds/time_series_60min_singleindex.csv
+
 # OS cruft
 .DS_Store
-
-# Big seed we’ll fetch separately (don’t commit)
-energy_dbt/seeds/time_series_60min_singleindex.csv
