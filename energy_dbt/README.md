@@ -1,3 +1,4 @@
+![dbt (DuckDB)](https://github.com/vivekr25/energy-forecasting-dbt/actions/workflows/dbt.yml/badge.svg)
 echo '
 ## Reproduce locally
 
