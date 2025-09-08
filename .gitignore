@@ -18,3 +18,13 @@ energy_dbt/seeds/time_series_60min_singleindex.csv
 
 # OS cruft
 .DS_Store
+
+# Plots and outputs
+*.png
+*.jpg
+*.jpeg
+*.csv
+*.parquet
+
+# Only track CSVs in seeds folder (dbt seeds)
+!energy_dbt/seeds/*.csv
